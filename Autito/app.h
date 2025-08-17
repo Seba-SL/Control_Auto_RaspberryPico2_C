@@ -30,6 +30,6 @@ status_t set_ports_out(void);
 void set_uart(void);
 
 status_t app_update(void);
-
+void control_app(uint8_t desicion);
 
 #endif
