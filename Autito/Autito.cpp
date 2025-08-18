@@ -34,6 +34,9 @@ status_t app_setup()
 
     set_ports_out();
 
+    gpio_put(LED_PIN, ON);
+    sleep_ms(100);
+    gpio_put(LED_PIN, OFF);
     
     return OK;
 
@@ -62,7 +65,7 @@ status_t app_update()
             uint8_t c = uart_getc(uart1);
             printf("Se recibio : %c\n",c);
             gpio_put(LED_PIN, ON);
-            MotorHorario(&motor_atras);
+            //MotorHorario(&motor_atras);
             control_app(c);
 
         }
